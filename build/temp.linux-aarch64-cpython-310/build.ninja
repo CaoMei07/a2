@@ -1,0 +1,40 @@
+ninja_required_version = 1.3
+cxx = c++
+
+cflags = -pthread -B /home/mint/miniforge3/envs/zipmoe/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O3 -Wall -fPIC -O3 -isystem /home/mint/miniforge3/envs/zipmoe/include -fPIC -O3 -isystem /home/mint/miniforge3/envs/zipmoe/include -fPIC -Ideepspeed/ops/csrc/aio/py_lib -Ideepspeed/ops/csrc/aio/common -I/home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib -I/home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/common -I/home/mint/miniforge3/envs/zipmoe/lib/python3.10/site-packages/torch/include -I/home/mint/miniforge3/envs/zipmoe/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/home/mint/miniforge3/envs/zipmoe/include/python3.10 -c
+post_cflags = -Wall -O0 -std=c++17 -shared -fPIC -Wno-reorder -fopenmp -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1016"' -DTORCH_EXTENSION_NAME=deepspeed_aio
+cuda_dlink_post_cflags = 
+sycl_dlink_post_cflags = 
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+
+
+
+
+
+
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_common.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/common/deepspeed_aio_common.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_types.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/common/deepspeed_aio_types.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_utils.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/common/deepspeed_aio_utils.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_op_desc.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_op_desc.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_thread.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_thread.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_cpu_op.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_cpu_op.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_pin_tensor.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_pin_tensor.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio_handle.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio_handle.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_copy.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_copy.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_io_handle.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_io_handle.cpp
+build /home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/py_ds_aio.o: compile /home/mint/Projects/ZipMoE/framework/deepspeed/ops/csrc/aio/py_lib/py_ds_aio.cpp
+
+
+
+
+
+
+
+

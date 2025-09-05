@@ -1,0 +1,10 @@
+pydantic
+packaging
+psutil
+transformers==4.37.2
+einops
+flash_attn
+ninja
+libaio-dev
+py-cpuinfo
+msgpack

@@ -1,0 +1,13 @@
+# ninja log v7
+2	1797	1756975374624621716	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_utils.o	c59729b1a012881
+1	1897	1756975374624621716	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_types.o	3e8531bc851d1d01
+1	2484	1756975374624621716	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/common/deepspeed_aio_common.o	868f8af41af12082
+5	47615	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio_handle.o	a648c0a02e669413
+6	47758	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_copy.o	15ca0993242b69ac
+2	47827	1756975374624621716	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_op_desc.o	2d8aec64d5c90c49
+4	48136	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_aio.o	932610913b848d27
+3	48320	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_cpu_op.o	af68c677f2137be0
+3	48399	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_aio_thread.o	3dc40508e5b2eb7a
+4	48531	1756975374628621625	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_pin_tensor.o	691abf1d226c4e0f
+7	49085	1756975374632621533	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/deepspeed_py_io_handle.o	8bae1a92a26c0e05
+7	50522	1756975374632621533	/home/mint/Projects/ZipMoE/framework/build/temp.linux-aarch64-cpython-310/deepspeed/ops/csrc/aio/py_lib/py_ds_aio.o	83c2142a0740913c
